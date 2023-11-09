@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <body style="font-family: helvetica, sans-serif; background: #f8f9fd; margin: 0px; color: #777">
+        <div>
+            <div style="width: 50%; margin: auto; text-align: center;">
+                <h1>Chegou o resultado do seu teste de personalidade 🎉</h1>
+                <p>Olá, <strong><?= respondent.firstName ?></strong>! Obrigado por ter participado do nosso teste de personalidade.</p>
+            </div>
+        </div>
+
+        <div style="background: #593493; font-size: 130%">
+            <div style="text-align: center; padding-bottom: 10px; padding-top: 0.5em;">
+                <h2 style="color: white">Esta é a sua pontuação</h2>
+            </div>
+
+            <table style="margin-left: auto; margin-right: auto; margin-top: 20px">
+                <tbody>
+                    <tr>
+                        <td width="150" valign="top" align="center">
+                            <span style="border-radius: 100px; background: #ff7f00; padding: 16px 24px">
+                                <strong style="color: white"><?= respondent.traits['O'] ?></strong>
+                            </span>
+                            <p style="color: #ffffff"><strong>abertura</strong></p>
+                        </td>
+                        <td width="150" valign="top" align="center">
+                            <span style="border-radius: 100px; background: #ff7f00; padding: 16px 24px">
+                                <strong style="color: white"><?= respondent.traits['C'] ?></strong>
+                            </span>
+                            <p style="color: #ffffff"><strong>conscienciosidade</strong></p>    
+                        </td>
+                        <td width="150" valign="top" align="center">
+                            <span style="border-radius: 100px; background: #ff7f00; padding: 16px 24px">
+                                <strong style="color: white"><?= respondent.traits['E'] ?></strong>
+                            </span>
+                            <p style="color: #ffffff"><strong>extroversão</strong></p>
+                        </td>
+                        <td width="150" valign="top" align="center">
+                            <span style="border-radius: 100px; background: #ff7f00; padding: 16px 24px">
+                                <strong style="color: white"><?= respondent.traits['A'] ?></strong>
+                            </span>
+                            <p style="color: #ffffff"><strong>amabilidade</strong></p>
+                        </td>
+                        <td width="150" valign="top" align="center">
+                            <span style="border-radius: 100px; background: #ff7f00; padding: 16px 24px">
+                                <strong style="color: white"><?= respondent.traits['N'] ?></strong>
+                            </span>
+                            <p style="color: #ffffff"><strong>neuroticismo</strong></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="margin: 20px">
+            <div style="background: #efefef; padding: 20px; width: 60%; margin: auto; text-align: center;">
+                <div style="background: white; padding: 10px">
+                    <h2>Entendendo a escala utilizada</h2>
+                    <p>As pontuações variam de 1 a 5. Então, se você obteve 4 ou 5 pontos no fator "abertura", isso significa que você tende a ser uma pessoa "aberta para as experiências" (veja abaixo); se, por outro lado, você obteve 1 ou 2, você tende a preferir situações rotineiras. Se obteve 3, você equilibra essas características.</p>
+                    <p><b>Mas atenção:</b> não interprete essas pontuações como características boas ou ruins. Ao invés disso, entenda as vantagens e desvantagens de cada uma delas e como elas podem estar contribuindo ou não para seus objetivos pessoais e profissionais.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr style="width: 60%; color: #f00">
+
+        <div style="margin: 20px">
+            <div style="background: #efefef; padding: 20px; width: 60%; margin: auto;">
+                <div style="background: white; padding: 10px">
+                    <h2>Os 5 grandes fatores de personalidade</h2>
+                    <p>Apresentamos abaixo uma breve descrição de cada um desses fatores, conforme o modelo dos cinco grandes fatores de personalidade, também conhecido como BigFive, bastante difundido mundialmente.</p>
+
+                    <div style="padding-right: 30%; text-align: left;">
+                        <h3 style="display: inline-block; color: black; margin-right: 1em;">Abertura</h3>
+                        <span style="border-radius: 25px; background: #ff7f00; padding: 16px 24px"><strong style="color:white"><?= respondent.traits['O'] ?></strong></span>
+                        <p>A "abertura para as experiências" tem a ver com sua tendência de buscar e apreciar experiências diferentes daquelas que você já está familiarizado. Pessoas com alta pontuação nesse fator geralmente são pessoas francas, imaginativas, espirituosas e artísticas. É também uma característica de quem tem interesses amplos. Por outro lado, indivíduos com baixa pontuação tendem a ser sensatos, convencionais ou simples.</p>
+                    </div>
+
+                    <div style="padding-left: 30%; text-align: right;">
+                        <span style="border-radius: 25px; background: #ff7f00; padding: 16px 24px"><strong style="color:white"><?= respondent.traits['C'] ?></strong></span>
+                        <h3 style="display: inline-block; color: black; margin-left: 1em;">Conscienciosidade</h3>
+                        <p>A conscienciosidade avalia sua organização, persistência e motivação rumo aos seus objetivos. Indivíduos com alta pontuação nesse fator geralmente são cautelosos, dignos de confiança, organizados e responsáveis. Por outro lado, indivíduos com baixa pontuação tendem a ser descuidados, desordenados e pouco confiáveis.</p>
+                    </div>
+
+                    <div style="padding-right: 30%; text-align: left;">
+                        <h3 style="display: inline-block; color: black; margin-right: 1em;">Extroversão</h3>
+                        <span style="border-radius: 25px; background: #ff7f00; padding: 16px 24px"><strong style="color:white"><?= respondent.traits['E'] ?></strong></span>
+                        <p>Tem a ver com a intensidade das suas interações interpessoais. Indivíduos extrovertidos (pontuação alta) tendem a ser ativos, entusiasmados, dominantes, sociáveis e falantes. Por outro lado, indivíduos introvertidos (pontuação baixa) tendem a ser sérios, quietos, orientados a tarefas e ficam bem sozinhos.</p>
+                    </div>
+
+                    <div style="padding-left: 30%; text-align: right;">
+                        <span style="border-radius: 25px; background: #ff7f00; padding: 16px 24px"><strong style="color:white"><?= respondent.traits['A'] ?></strong></span>
+                        <h3 style="display: inline-block; color: black; margin-left: 1em">Amabilidade</h3>
+                        <p>A amabilidade avalia a qualidade da sua orientação interpessoal. Indivíduos com alta pontuação nesse fator são agradáveis, amáveis, cooperativos e afetuosos. Por outro lado, indivíduos com baixa pontuação tendem a ser frios, indelicados, desconfiados e inescrupulosos.</p>
+                    </div>
+
+                    <div style="padding-right: 30%; text-align: left;">
+                        <h3 style="display: inline-block; color: black; margin-right: 1em;">Neuroticismo</h3>
+                        <span style="border-radius: 25px; background: #ff7f00; padding: 16px 24px"><strong style="color:white"><?= respondent.traits['N'] ?></strong></span>
+                        <p>Indivíduos com alta pontuação nesse fator são geralmente nervosos, sensíveis, tensos e preocupados. Eles tendem a experimentar irritação, melancolia e vergonha com maior frequência. Por outro lado, indivíduos com baixa pontuação são calmos, pouco emotivos e satisfeitos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #ff7f00; padding: 20px">
+            <div style="width: 70%; margin: auto; text-align: center; padding-bottom: 30px">
+                <img src="..." alt="Logotipo">
+                <div style="display: inline-block; margin-left: 20px; color: white; text-align: left">
+                    <p style="margin-bottom: -10px"><a href="mailto://contato@dominio.com.br" style="color: white">contato@dominio.com.br</a></p>
+                    <p><a href="..." style="color: white">dominio.com.br</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <span style="color: #a09d9d"><?= respondent.email ?></span>
+        </div>
+    </body>
+</html>
